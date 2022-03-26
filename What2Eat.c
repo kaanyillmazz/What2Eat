@@ -26,7 +26,7 @@ int main() {
     printf("Starting with %d people\n", numberOfPeople);
 
     int menuPoints[] = {0, 0, 0, 0, 0, 0, 0};
-    int newMenuPoints[] = {0,0,0,0,0,0,0};
+    int newMenuPoints[] = {0, 0, 0, 0, 0, 0, 0};
 
     char initialMenu[6][20] =
             {"Kebab",
@@ -74,6 +74,8 @@ int main() {
 
     int threshold = numberOfPeople / 2 * 5;
     printf("threshold is: %d \n", threshold);
+
+    //integer for storing how many passed the threshold
     int proceed = 0;
 
     for (int i = 0; i < 6; i++) {
@@ -137,7 +139,7 @@ int main() {
         int highest = 0;
         int highestDish = 0;
         for (int a = 0; a < 5; a++) {
-            if(newMenuPoints[a] > highest) {
+            if (newMenuPoints[a] > highest) {
                 highest = newMenuPoints[a];
                 highestDish = a;
             }
